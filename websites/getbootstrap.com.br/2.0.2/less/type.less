@@ -1,0 +1,350 @@
+//
+// Typography.less.
+// Títulos, texto no body, listas, código, e muito mais para
+// um sistema de tipografia versátil e durável.
+//
+
+//
+// BODY TEXT.
+//
+
+p
+{
+    margin: 0 0 @baseLineHeight / 2;
+    font-family: @baseFontFamily;
+    line-height: @baseLineHeight;
+    font-size: @baseFontSize;
+
+    small
+    {
+        font-size: @baseFontSize - 2;
+        color: @grayLight;
+    }
+}
+
+.lead
+{
+    line-height: @baseLineHeight * 1.5;
+    margin-bottom: @baseLineHeight;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+//
+// HEADINGS.
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    text-rendering: optimizelegibility;
+    font-family: @headingsFontFamily;
+    font-weight: @headingsFontWeight;
+    color: @headingsColor;
+    margin: 0;
+
+    small
+    {
+        font-weight: normal;
+        color: @grayLight;
+    }
+}
+
+h1
+{
+    line-height: @baseLineHeight * 2;
+    font-size: 30px;
+
+    small
+    {
+        font-size: 18px;
+    }
+}
+
+h2
+{
+    line-height: @baseLineHeight * 2;
+    font-size: 24px;
+
+    small
+    {
+        font-size: 18px;
+    }
+}
+
+h3
+{
+    line-height: @baseLineHeight * 1.5;
+    font-size: 18px;
+
+    small
+    {
+        font-size: 14px;
+    }
+}
+
+h4,
+h5,
+h6
+{
+    line-height: @baseLineHeight;
+}
+
+h4
+{
+    font-size: 14px;
+
+    small
+    {
+        font-size: 12px;
+    }
+}
+
+h5
+{
+    font-size: 12px;
+}
+
+h6
+{
+    text-transform: uppercase;
+    color: @grayLight;
+    font-size: 11px;
+}
+
+//
+// Título da página.
+//
+.page-header
+{
+    border-bottom: 1px solid @grayLighter;
+    padding-bottom: @baseLineHeight - 1;
+    margin: @baseLineHeight 0;
+}
+
+.page-header h1
+{
+    line-height: 1;
+}
+
+//
+// LISTAS.
+//
+
+//
+// Listas não ordenadas e ordenadas.
+//
+ul,
+ol
+{
+    margin: 0 0 @baseLineHeight / 2 25px;
+    padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul
+{
+    margin-bottom: 0;
+}
+
+ul
+{
+    list-style: disc;
+}
+
+ol
+{
+    list-style: decimal;
+}
+
+li
+{
+    line-height: @baseLineHeight;
+}
+
+ul.unstyled,
+ol.unstyled
+{
+    margin-left: 0;
+    list-style: none;
+}
+
+//
+// Listas de descrição.
+//
+dl
+{
+    margin-bottom: @baseLineHeight;
+}
+
+dt,
+dd
+{
+    line-height: @baseLineHeight;
+}
+
+dt
+{
+    line-height: @baseLineHeight - 1;
+    font-weight: bold;
+}
+
+dd
+{
+    margin-left: @baseLineHeight / 2;
+}
+
+//
+// Layout horizontal (como formulários).
+//
+.dl-horizontal
+{
+    dt
+    {
+        text-align: right;
+        width: 120px;
+        clear: left;
+        float: left;
+    }
+
+    dd
+    {
+        margin-left: 130px;
+    }
+}
+
+//
+// MISC.
+//
+
+//
+// Régras Horizontal.
+//
+hr
+{
+    border: 0;
+    border-top: 1px solid @hrBorder;
+    border-bottom: 1px solid @white;
+    margin: @baseLineHeight 0;
+}
+
+//
+// Ênfase.
+//
+strong
+{
+    font-weight: bold;
+}
+
+em
+{
+    font-style: italic;
+}
+
+.muted
+{
+    color: @grayLight;
+}
+
+//
+// Abreviações e Acrônimos.
+//
+abbr[title]
+{
+    border-bottom: 1px dotted #ddd;
+    cursor: help;
+}
+
+abbr.initialism
+{
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+//
+// Blockquotes.
+//
+blockquote
+{
+    border-left: 5px solid @grayLighter;
+    margin: 0 0 @baseLineHeight;
+    padding: 0 0 0 15px;
+
+    p
+    {
+        margin-bottom: 0;
+
+        #font > .shorthand(16px,300,@baseLineHeight * 1.25);
+    }
+
+    small
+    {
+        line-height: @baseLineHeight;
+        color: @grayLight;
+        display: block;
+
+        &:before
+        {
+            content: '\2014 \00A0';
+        }
+    }
+
+    //
+    // Flutue para a direita com text-align: right.
+    //
+    &.pull-right
+    {
+        border-right: 5px solid @grayLighter;
+        padding-right: 15px;
+        padding-left: 0;
+        border-left: 0;
+        float: right;
+
+        p,
+        small
+        {
+            text-align: right;
+        }
+    }
+}
+
+//
+// Citações.
+//
+q:before,
+q:after,
+blockquote:before,
+blockquote:after
+{
+    content: "";
+}
+
+//
+// Endereços.
+//
+address
+{
+    margin-bottom: @baseLineHeight;
+    line-height: @baseLineHeight;
+    font-style: normal;
+    display: block;
+}
+
+//
+// Misc.
+//
+small
+{
+    font-size: 100%;
+}
+
+cite
+{
+    font-style: normal;
+}

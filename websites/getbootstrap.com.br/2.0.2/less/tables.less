@@ -1,0 +1,309 @@
+//
+// Tables.less.
+// Tabelas para, você adivinhou, dados tabulares.
+//
+
+//
+// BASE TABLES.
+//
+
+table
+{
+    background-color: @tableBackground;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+
+//
+// BASELINE STYLES.
+//
+
+.table
+{
+    margin-bottom: @baseLineHeight;
+    width: 100%;
+
+    //
+    // Células.
+    //
+    th,
+    td
+    {
+        border-top: 1px solid @tableBorder;
+        line-height: @baseLineHeight;
+        vertical-align: top;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th
+    {
+        font-weight: bold;
+    }
+
+    //
+    // Alinhamento inferior para títulos de coluna.
+    //
+    thead th
+    {
+        vertical-align: bottom;
+    }
+
+    //
+    // Remova a borda superior do título por padrão.
+    //
+    colgroup + thead tr:first-child th,
+    colgroup + thead tr:first-child td,
+    thead:first-child tr:first-child th,
+    thead:first-child tr:first-child td
+    {
+        border-top: 0;
+    }
+
+    //
+    // Conta para múltiplas instâncias tbody.
+    //
+    tbody + tbody
+    {
+        border-top: 2px solid @tableBorder;
+    }
+}
+
+//
+// TABELA CONDENSADA COM MEIO PADDING.
+//
+
+.table-condensed
+{
+    th,
+    td
+    {
+        padding: 4px 5px;
+    }
+}
+
+//
+// VERSÃO COM BORDAS.
+//
+
+.table-bordered
+{
+    border: 1px solid @tableBorder;
+    border-left: 0;
+    border-collapse: separate;
+
+    .border-radius(4px);
+
+    th,
+    td
+    {
+        border-left: 1px solid @tableBorder;
+    }
+
+    //
+    // Evite uma borda dupla.
+    //
+    thead:first-child tr:first-child th,
+    tbody:first-child tr:first-child th,
+    tbody:first-child tr:first-child td
+    {
+        border-top: 0;
+    }
+
+    //
+    // Para o primeiro th ou td na primeira linha do
+    // primeiro thead ou tbody.
+    //
+    thead:first-child tr:first-child th:first-child,
+    tbody:first-child tr:first-child td:first-child
+    {
+        .border-radius(4px 0 0 0);
+    }
+
+    thead:first-child tr:first-child th:last-child,
+    tbody:first-child tr:first-child td:last-child
+    {
+        .border-radius(0 4px 0 0);
+    }
+
+    //
+    // Para o primeiro th ou td na primeira linha do primeiro
+    // thead ou tbody.
+    //
+    thead:last-child tr:last-child th:first-child,
+    tbody:last-child tr:last-child td:first-child
+    {
+        .border-radius(0 0 0 4px);
+    }
+
+    thead:last-child tr:last-child th:last-child,
+    tbody:last-child tr:last-child td:last-child
+    {
+        .border-radius(0 0 4px 0);
+    }
+}
+
+//
+// ZEBRA-STRIPING.
+//
+
+//
+// Estilos padrão de listras de zebra (alternando fundos
+// cinza e transparentes).
+//
+.table-striped
+{
+    tbody
+    {
+        tr:nth-child(odd) td,
+        tr:nth-child(odd) th
+        {
+            background-color: @tableBackgroundAccent;
+        }
+    }
+}
+
+//
+// HOVER EFFECT.
+//
+// Colocado aqui porque deve vir depois da possível lista de zebra.
+//
+.table
+{
+    tbody tr:hover td,
+    tbody tr:hover th
+    {
+        background-color: @tableBackgroundHover;
+    }
+}
+
+//
+// TABLE CELL SIZING.
+//
+
+//
+// Mude as colunas.
+//
+table
+{
+    .span1
+    {
+        .tableColumns(1);
+    }
+
+    .span2
+    {
+        .tableColumns(2);
+    }
+
+    .span3
+    {
+        .tableColumns(3);
+    }
+
+    .span4
+    {
+        .tableColumns(4);
+    }
+
+    .span5
+    {
+        .tableColumns(5);
+    }
+
+    .span6
+    {
+        .tableColumns(6);
+    }
+
+    .span7
+    {
+        .tableColumns(7);
+    }
+
+    .span8
+    {
+        .tableColumns(8);
+    }
+
+    .span9
+    {
+        .tableColumns(9);
+    }
+
+    .span10
+    {
+        .tableColumns(10);
+    }
+
+    .span11
+    {
+        .tableColumns(11);
+    }
+
+    .span12
+    {
+        .tableColumns(12);
+    }
+
+    .span13
+    {
+        .tableColumns(13);
+    }
+
+    .span14
+    {
+        .tableColumns(14);
+    }
+
+    .span15
+    {
+        .tableColumns(15);
+    }
+
+    .span16
+    {
+        .tableColumns(16);
+    }
+
+    .span17
+    {
+        .tableColumns(17);
+    }
+
+    .span18
+    {
+        .tableColumns(18);
+    }
+
+    .span19
+    {
+        .tableColumns(19);
+    }
+
+    .span20
+    {
+        .tableColumns(20);
+    }
+
+    .span21
+    {
+        .tableColumns(21);
+    }
+
+    .span22
+    {
+        .tableColumns(22);
+    }
+
+    .span23
+    {
+        .tableColumns(23);
+    }
+
+    .span24
+    {
+        .tableColumns(24);
+    }
+}

@@ -1,0 +1,200 @@
+//
+// DROPDOWN MENUS.
+//
+
+//
+// Use a classe .menu em qualquer elemento <li> na barra mais
+// alta ou ul.tabs e você obterá alguns menus suspensos super
+// sofisticados.
+//
+.dropdown
+{
+    position: relative;
+}
+
+.dropdown-toggle
+{
+}
+
+.dropdown-toggle:active,
+.open .dropdown-toggle
+{
+    outline: 0;
+}
+
+//
+// Dropdown arrow/caret.
+//
+.caret
+{
+    border-left:  4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top:   4px solid @black;
+    display: inline-block;
+    vertical-align: top;
+    content: "";
+    height: 0;
+    width: 0;
+
+    .opacity(30);
+}
+
+//
+// Coloque o cursor.
+//
+.dropdown .caret
+{
+    margin-left: 2px;
+    margin-top: 8px;
+}
+
+.dropdown:hover .caret,
+.open.dropdown .caret
+{
+    .opacity(100);
+}
+
+//
+// O menu dropdown (ul).
+//
+.dropdown-menu
+{
+    border-color: #ccc;
+    border-color: rgba(0,0,0,.2);
+    background-color: @dropdownBackground;
+    z-index: @zindexDropdown;
+    border-style: solid;
+    position: absolute;
+    border-width: 1px;
+    min-width: 160px;
+    list-style: none;
+    padding: 4px 0;
+    display: none;
+    float: left;
+    top: 100%;
+    margin: 0;
+    left: 0;
+
+
+    .border-radius(0 0 5px 5px);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+            background-clip: padding-box;
+
+    //
+    // Alinha o menu suspenso à direita.
+    //
+    &.pull-right
+    {
+        left: auto;
+        right: 0;
+    }
+
+    //
+    // Divisores (basicamente uma hora) no menu dropdown.
+    //
+    .divider
+    {
+        .nav-divider();
+    }
+
+    //
+    // Links no menu suspenso.
+    //
+    a
+    {
+        line-height: @baseLineHeight;
+        color: @dropdownLinkColor;
+        white-space: nowrap;
+        font-weight: normal;
+        padding: 3px 15px;
+        display: block;
+        clear: both;
+    }
+}
+
+//
+// Status Hover.
+//
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover
+{
+    background-color: @dropdownLinkBackgroundHover;
+    color: @dropdownLinkColorHover;
+    text-decoration: none;
+}
+
+//
+// Estado aberto para o dropdown.
+//
+.dropdown.open
+{
+    .dropdown-toggle
+    {
+        background: #ccc;
+        background: rgba(0,0,0,.3);
+        color: @white;
+    }
+
+    .dropdown-menu
+    {
+        display: block;
+    }
+}
+
+//
+// Menus suspensos alinhados à direita.
+//
+.pull-right .dropdown-menu
+{
+    left: auto;
+    right: 0;
+}
+
+//
+// Permitir que os menus dropdowns vão de baixo para
+// cima (também conhecido como dropup-menu). Basta
+// adicionar .dropup após a classe .dropdown padrão
+// e pronto. Questão: abstrair isso para que os
+// estilos fixos da navbar não sejam colocados
+// aqui ?
+//
+.dropup,
+.navbar-fixed-bottom .dropdown
+{
+    //
+    // Inverta o cursor.
+    //
+    .caret
+    {
+        border-bottom: 4px solid @black;
+        content: "\2191";
+        border-top: 0;
+    }
+
+    //
+    // Posicionamento diferente para menu ascendente.
+    //
+    .dropdown-menu
+    {
+        margin-bottom: 1px;
+        bottom: 100%;
+        top: auto;
+    }
+}
+
+//
+// Typeahead.
+//
+.typeahead
+{
+    //
+    // Dê-lhe algum espaço para respirar.
+    //
+    margin-top: 2px;
+
+    .border-radius(4px);
+}
