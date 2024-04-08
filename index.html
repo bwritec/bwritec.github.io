@@ -3,14 +3,37 @@
 <head>
 
     <!--
+      - Copyright (C) <ano>  Chifrudo <chifrudo@localhost.com.br>
+      -
+      - Este programa é um software livre: você pode redistribuí-lo e/ou
+      - modificá-lo sob os termos da GNU General Public License conforme
+      - publicada por a Free Software Foundation, seja a versão 3 da
+      - Licença, ou (a seu critério) qualquer versão posterior.
+      -
+      - Este programa é distribuído na esperança de que seja útil,
+      - mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de
+      - COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Veja a
+      - Licença Pública Geral GNU para mais detalhes.
+      -
+      - Você deve ter recebido uma cópia da GNU General Public License
+      - juntamente com este programa. Caso contrário, consulte
+      - <https://www.gnu.org/licenses/>.
+     -->
+
+    <!--
       - Charset.
      -->
     <meta charset="utf-8">
 
     <!--
+      - Viewport.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
       - Título.
      -->
-    <title>Bwritec - Olá mundo</title>
+    <title>Bwritec - Página inicial</title>
 
 </head>
 <body>
@@ -24,6 +47,30 @@
             </a>
         </li>
     </ul>
+
+    <script type="text/javascript" src="./dist/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="./dist/js/cavalo_manco.js"></script>
+    <script type="text/javascript">
+
+        /**
+         * Aqui poderiamos fazer uso de programação concorrente
+         * ou promessas. Más vamos deixar no modo padrão para
+         * que o navegador tome uma boa decisão. Temos apenas
+         * que perguntar o jQuery sé o DOM já está disponível
+         * para o procedimento.
+         */
+        $(document).ready(function()
+        {
+            /**
+             * O dom está disponível, então vamos iniciar os
+             * procedimentos. Más você pode chamar de execução
+             * caso o usuário esteja fazendo uso de um sistema
+             * que ache o termo mais correto.
+             */
+            cavalo_manco();
+        });
+
+    </script>
 
 </body>
 </html>
